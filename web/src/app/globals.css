@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-ground: #140e0b;
+  --bg-surface: #18110d;
+  --bg-card: #201712;
+  --border-subtle: #423227;
+  --border-strong: #543b2e;
+  --accent-gold: #f1c84b;
+  --accent-ronchi: #f1c84b;
+  --accent-grannysmith: #8ec2c4;
+  --accent-piper: #d15b29;
+  --accent-cloudburst: #1f2942;
+  --accent-bluebayoux: #4b5b81;
+  --text-main: #FFFFFF;
+  --text-muted: #CBD5E1;
+  --text-faint: #94A3B8;
+}
+
+body {
+  background-color: var(--bg-ground);
+  color: var(--text-main);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Rules enforcing Impeccable standards */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, blockquote {
+  text-wrap: pretty;
+}
+
+/* Custom Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* Non-nested, flat elevated editorial card */
+.editorial-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: border-color 0.25s ease;
+}
+
+.editorial-panel:hover {
+  border-color: var(--border-strong);
+}
+
+/* Solid Victorian Panels */
+.victorian-card {
+  background-color: #201712 !important;
+  border: 1px solid #423227 !important;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.victorian-card:hover {
+  border-color: #543b2e !important;
+}
+
+/* Floating Center-Bottom Navigation Dock - 100% OPAQUE & SOLID */
+.sherlock-dock {
+  background-color: #140e0b !important;
+  background: #140e0b !important;
+  border: 2px solid #f1c84b !important;
+  box-shadow: 0 16px 48px -4px rgba(0, 0, 0, 0.95), 0 0 0 1.5px rgba(241, 200, 75, 0.6) !important;
+  z-index: 50 !important;
+}
